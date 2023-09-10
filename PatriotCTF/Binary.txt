@@ -1,0 +1,15 @@
+Binary
+
+Take my binary digits and give me the flag.
+
+Went to:
+https://www.dcode.fr/cipher-identifier
+
+Entered: the encrypted message
+
+Saw: Spoon Cipher
+
+Entered: the encrypted message
+
+Answer
+PCTF{Sp00N_F33d_M3_11191}

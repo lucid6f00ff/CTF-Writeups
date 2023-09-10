@@ -1,0 +1,20 @@
+Twins
+How did the twin feel after meeting his long-lost brother? He was beside himself.
+
+Searched:
+text comparison
+
+Saw:
+https://www.diffchecker.com/text-compare/
+
+Entered:
+2 texts “beside” each other
+
+Saw:
+the differences between the texts
+
+Recorded:
+4wes0M3_sTories_man
+
+Answer:
+PCTF{4wes0M3_sTories_man}

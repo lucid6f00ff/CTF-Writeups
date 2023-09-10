@@ -1,0 +1,33 @@
+Karter
+In 2021, Flipkart added a new director. Your task is to find:
+	1.	his last name (UPPERCASE)
+	2.	his Director Identification Number
+	3.	And the URL of the primary source from where you found his name (URL format: scheme://subdomain.rootdomain.tld) paths excluded
+
+Flag Format: PCTF{LASTNAME_IdentificationNumber_URL}
+
+Example: PCTF{SMITH_123456_https://google.com}
+
+
+
+Looked up:
+Director Identification Number
+
+Saw:
+https://www.mca.gov.in
+
+Searched for:
+View Company / LLP Master Data
+
+Entered:
+flipkart
+
+Searched for:
+the flipkart who had a new director in 2021 (11 flipkarts show up total)
+
+Saw (in FLIPKART INTERNET PRIVATE LIMITED):
+09075331 JONATHAN MARSHALL COLLINS 05/03/2021
+
+
+Answer:
+PCTF{COLLINS_09075331_https://mca.gov.in}

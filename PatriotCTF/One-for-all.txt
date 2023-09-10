@@ -1,0 +1,17 @@
+One-for-all
+
+Checked:
+network tab in inspect element
+
+Saw:
+name=kiran
+
+went back to: http://chal.pctf.competitivecyber.club:9090
+
+entered:
+username (kiran)
+
+can also do http://chal.pctf.competitivecyber.club:9090/" or ""=" (sql injection)
+
+Saw:
+["112311","one@gmail.com","kiran","nothing here"]

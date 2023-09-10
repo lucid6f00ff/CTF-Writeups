@@ -1,0 +1,24 @@
+1972 Schism
+Before George Mason University became its own college, GMU was a satellite school of what other commonwealth college?
+
+Searched:
+George Mason University sattilite school history
+
+Went to:
+https://www.gmu.edu/about/legacy/history
+
+Looked for:
+year 1972
+
+Saw the entry: 
+A University is Born
+On Friday, April 7, 1972, a group from George Mason College met with Virginia Governor A. Linwood Holton Jr. in Richmond. They were there to witness the governor sign into law Virginia General Assembly Bill H 210, which separated the college from the University of Virginia. With the stroke of a pen, George Mason University, as we know it today, was born.
+Saw: “Separated the college from the University of Virginia”
+Went to https://www.allacronyms.com/university_of_virginia/abbreviated
+Looked for:
+University of Virginia Abbreviation
+Saw:
+UVA
+
+Answer:
+PCTF{UVA}

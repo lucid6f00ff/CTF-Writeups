@@ -1,0 +1,65 @@
+Satellite Killer
+Most satellites get to live out a relatively peaceful existence in space until their orbit eventually decays and they fall back to Earth.
+Most.
+Back in the 80's, one poor satellite met a premature end at the hands of an ASM-135.
+I would like you to find the date that the second-to-last piece of its debris fell back down to Earth (Or more realistically, its decay date).
+In addition, please give me its object ID/International Code.
+*Flag format: PCTF{OBJECTID_YEAR-MONTH-DAY} *
+For example, for a piece of debris from the Falcon 9, the flag would look like this: PCTF{2023-028BG_2023-3-15}
+
+Looked up:
+satellite met a premature end at the hands of an ASM-135 1980's
+
+Saw: https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198034/vought-asm-135a-anti-satellite-missile/
+
+Saw: U.S. Solwind P78-1 satellite
+
+Double-checked with (from previous search result):
+https://www.smithsonianmag.com/air-space-magazine/first-space-ace-180968349/
+
+Saw again: U.S. Solwind P78-1 satellite
+
+Looked up:
+U.S. Solwind P78-1 satellite recovery
+
+Saw:
+https://en.wikipedia.org/wiki/Solwind#Destruction
+
+Saw: 
+On September 13, 1985, the satellite was destroyed in orbit at 20:43 UTC at 35°N 126°W with an altitude of 525 kilometres (326 mi)[5] by an ASM-135 ASAT launched from a US Air Force F-15 Eagle fighter aircraft. The test resulted in 285 cataloged pieces of orbital debris. 1 piece of debris remained in orbit to at least May 2004,[10] but had deorbited by 2008.[5] The last piece of debris, COSPAR 1979-017GX, SATCAT 16564, deorbited 9 May 2004 according to SATCAT.
+
+Looked up:
+Satellite Catalog Number (which is SATCAT)
+
+Saw:
+https://www.n2yo.com/database/?name=SOLWIND&incl_deb=on#results
+
+Looked for:
+Solwind
+
+Issue:
+Only up to 100 search results show at a time. There are 285 debris.
+
+Looked up:
+solwind last debree
+
+Saw:
+https://in-the-sky.org/spacecraft.php?id=16309
+
+Went to:
+https://in-the-sky.org/search.php?s=&searchtype=Spacecraft&satorder=0&lyearmin=1979&lyearmax=1980
+
+Searched:
+solwind deb with a launch date between 1979 and 2009 (2009 part not needed since all belong to Solwind) (got solwind deb name from n2yo website step)
+
+Looked for:
+1979-017GX in 2004 (because it is the last debris according to previous wikipedia step)
+
+Looked for:
+Last Debris with flight ended date before 1979-017GX in 2004 (used Ctrl+f and typed “200” since  I saw there were a few 2000s dates)
+
+Saw:
+1979-017AN with flight ended 06 Dec 2002
+
+
+Answer: PCTF{1979-017AN_2002-12-6}

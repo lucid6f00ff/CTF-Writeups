@@ -1,0 +1,23 @@
+Getting down like a bunch of Tito Clowns
+At one point in time, GMU was host to the only on campus meeting place and restaurant in Virginia that doubled as a bar on the weekends. What was the name of this restaurant, and what year did it close?
+
+Looked up:
+GMU was host to the only on campus meeting place and restaurant in Virginia that doubled as a bar on the weekends
+
+Saw:
+https://www.gmu.edu/about/legacy/history
+
+Saw:
+The rat in 1975
+
+Looked up:
+GMU The Rat
+
+saw:
+https://vault217.gmu.edu/?tag=gmu-rathskeller
+
+Saw:
+Rathskeller closed in 2019
+
+Answer:
+PCTF{Rathskeller, 2019}

@@ -1,0 +1,73 @@
+Checkmate
+
+Get your adrenaline pumping as you navigate the thrilling world of Crypto Web for Capture the Flag.
+
+Minor brute force is allowed, but you should not need over 4000 tries.
+
+Flag format: PCTF{}
+
+Saw:
+view source
+
+Saw:
+username and password functions
+
+Looked up:
+name.split("").reverse().join("") 
+
+Saw:
+JavaScript links
+
+Ran:
+username function in online javascript compiler (https://www.programiz.com/javascript/online-compiler/)
+
+function checkName(name){
+
+    var check  = name.split("").reverse().join("");
+    //return check === "uyjnimda" ? !0 : !1;
+    return check;
+}
+console.log(checkName("adminjyu"));
+
+Saw:
+uyjnimda returned adminjyu (one is the reverse of the other)
+
+username: adminjyu
+
+
+
+//checks for lowercase alphabet
+function ok(e){
+	if (e.charCodeAt(0)<= 122 && e.charCodeAt(0) >=97 ){
+	return e.charCodeAt(0);
+}}
+
+//creates array of alphabet values from ok(e) function
+function checkValidity(password){
+    const arr = Array.from(password).map(ok);
+    return arr;
+}
+
+//xor for loop
+    let sum = 0;
+    for (let i = 0; i < arr.length; i+=6){
+        var add = arr[i] & arr[i + 2]; 
+        var or = arr[i + 1] | arr[i + 4]; 
+        var xor = arr[i + 3] ^ arr[i + 5];
+        if (add === 0x60   && or === 0x61   && xor === 0x6) sum += add + or - xor; 
+    }
+   return  sum === 0xbb ? !0 : !1;
+}
+
+//used cyber chef to convert hex to decimal
+if (add === 0x60   && or === 0x61   && xor === 0x6) sum += add + or - xor; 
+//add === 0x60 (0x60 = 96)
+//or === 0x61 (0x61 = 97)
+//xor === 0x6 (0x6 = 6)
+//sum === 0xbb (0xbb = 187)
+
+aabaag = 96 97 6
+sum = 187
+
+username: adminjyu
+password: aabaag

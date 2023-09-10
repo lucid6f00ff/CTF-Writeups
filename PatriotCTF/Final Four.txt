@@ -1,0 +1,21 @@
+Final Four
+
+When GMU opened its Fairfax campus following a donation from the city of Fairfax, it built 4 builings that still stand to this day. What are the names of these 4 building as they are called today in alphabetical order?
+Flag format: PCTF{A-Building, B-Building, C-Building, D-Building}
+For example, PCTF{Apple, Banana, Cherry, Durian}
+
+
+Looked up:
+When GMU opened its Fairfax campus following a donation from the city of Fairfax, it built 4 builings that still stand to this day.
+
+saw:
+https://pastandpresent.gmu.edu/items/show/4?tour=3&index=0
+
+saw:
+Krug Hall
+Finley Building
+East Building
+West Building
+
+Answer:
+PCTF{East, Finley, Krug, West}

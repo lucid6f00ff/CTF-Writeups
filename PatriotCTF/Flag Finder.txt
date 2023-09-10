@@ -1,0 +1,112 @@
+Flag Finder
+
+All you have to do is guess the flag.
+Flag format: pctf{}
+
+nc chal.pctf.competitivecyber.club 4757
+
+
+discord hint says checks length, then takes letters and numbers, also includes flag format "pctf{}"
+
+we found the length (kept adding 1 till something happened):
+1111111111111111111
+returns "theres been an error"
+
+
+retype with format (replaced 1s):
+pctf{aaaaaaaaaaaaa}
+
+returns:
+1:112
+2:99
+3:116
+4:102
+5:123
+
+put into cyber chef:
+-to charcode
+-from hex
+-to decimal
+
+112= p
+99= c
+116= t
+102= f
+123= {
+
+now we know it returns the correct characters
+
+pctf{Taaaaaaaaaaaa}
+84=T
+
+looked up common letters after t (vowels showed up):
+https://english.stackexchange.com/questions/110576/what-are-the-most-common-letters-used-in-pairs-after-others-in-the-english-alpha
+
+looked up leet-speak as well:
+https://en.wikipedia.org/wiki/Leet
+
+General strategy:
+if I wasn't sure
+-checked what letter is most common after one found
+--if it was a vowel, then checked a,e,i,o,u, in lower-case, upper-case, and leet-speak
+-started with replacing "a" with numbers 0-9
+-replaced "a" with letters b-z
+-replaced "a" with letters B-Z
+
+if I thought I was sure
+-tried to look up the letters I found and match it to an existing phrase (didn't work for this one)
+
+pctf{Tiaaaaaaaaaaa}
+105=i
+
+pctf{Timaaaaaaaaaa}
+109=m
+
+pctf{Tim3aaaaaaaaa}
+51=3
+
+pctf{Tim3iaaaaaaaa}
+105=i
+
+pctf{Tim3inaaaaaaa}
+110=n
+
+pctf{Tim3ingaaaaaa}
+103=g
+
+pctf{Tim3ingIaaaaa}
+73=I
+
+pctf{Tim3ingI8aaaa}
+56=8
+
+pctf{Tim3ingI8Naaa}
+78=N
+
+pctf{Tim3ingI8N3aa}
+51=3
+97=a
+
+pctf{Tim3ingI8N3at}
+116=t
+125=}
+
+
+Answer:
+pctf{Tim3ingI8N3at}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
