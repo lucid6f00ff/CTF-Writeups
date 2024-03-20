@@ -1,0 +1,58 @@
+Reverse/teenage-wasm
+baby (basic) wasm from vsCTF 2022 is all grown up and more secure than ever!
+
+https://challs.vsc.tf/teenage-wasm-4sodpiwx
+
+Opened: inspect
+Saw: wasm file
+Searched for: flag
+Saw:
+"admin\00\00\00\98\01\10\00\0a\00\00\00'\00\00\00M\00\00\00Login successful, here's your flag:"
+
+(Didn't see any passwords so went back to drawing board)
+
+Saw: "baby wasm from vsCTF 2022"
+Looked up: "baby-wasm vsctf2022"
+Saw: https://nanimokangaeteinai.hateblo.jp/entry/2022/07/11/185103
+
+(Went back to wasm file)
+
+Searched for: "memcmp"
+Created: break point at the function's end
+Sent:
+login "admin"
+password "A"
+Clicked: Login
+
+(In breakpoint menu to the right of the wasm code)
+Saw: Local
+Saw:
+$var0: i32 {value: 1179592}
+$var1: i32 {value: 1049028}
+$var2: i32 {value: 5}
+
+Saw: Module
+Saw: memories
+Saw: $memory
+Clicked: icon beside "Memory(19)"
+
+(Below both wasm code and breakpoint menu)
+Sent: "1179592" (from $var0) as address
+Saw: username "admin" entered
+Sent: "1049028" (from $var1) as address
+Saw: username "admin" being compared to
+
+(Tried logging in with many A's similar to the source found earlier and looked through the addresses for them)
+
+Found: (at address 0x0012D66C)
+ilovewasm1337_bFrbqmwZMjpZgyotwJgX4qtWXQz
+
+Sent:
+login "admin"
+password "ilovewasm1337_bFrbqmwZMjpZgyotwJgX4qtWXQz"
+
+Saw:
+vsctf{w4sm_is_n0t_aw3some_pWuTMXJmq2KwNN}
+
+Answer:
+vsctf{w4sm_is_n0t_aw3some_pWuTMXJmq2KwNN}
