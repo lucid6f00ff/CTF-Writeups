@@ -1,0 +1,30 @@
+Reverse/Functional CPP II
+
+Yet another (simple) functional challenge.
+
+
+
+(Opened file in dogbolt.org with the Hex-Rays option and see C++ code)
+
+Searched: flag
+Saw:
+std::operator<<<std::char_traits<char>>(&std::cout, "Enter your flag: ");
+  std::operator>><char>(&std::cin, v40);
+  if ( std::string::length(v40) != 50 )
+  {
+    v9 = std::operator<<<std::char_traits<char>>(&std::cout, "Sorry.");
+    std::ostream::operator<<(v9, &std::endl<char,std::char_traits<char>>);
+    exit(0);
+  }
+
+(Now we know the flag is 50 characters, and it's variable is v40)
+
+Saw: (kept scrolling down)
+v24 = std::operator<<<std::char_traits<char>>(&std::cout, "You got it.");
+
+(Now we know v40 must pass the checks before this point)
+
+
+
+v41: vsctf 2023
+v39: v42, v42, v3, v4, v5

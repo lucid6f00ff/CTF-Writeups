@@ -1,0 +1,13 @@
+Web/Sanity Check
+
+you know what to do.
+
+https://challs.vsc.tf/sanity-check
+
+>opened page in Burp Suite
+>checked page source
+>saw:
+vsctf{c0ngratulati0ns_y0u_viewed_the_s0urc3!...welcome_to_vsctf!}
+
+flag:
+vsctf{c0ngratulati0ns_y0u_viewed_the_s0urc3!...welcome_to_vsctf!}

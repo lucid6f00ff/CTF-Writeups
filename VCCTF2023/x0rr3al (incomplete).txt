@@ -1,0 +1,55 @@
+x0rr3al?!!
+
+Are you being x0rr3al with me right now?!
+
+(Opened file in dogbolt.org with the Hex-Rays option and see C code)
+
+Searched: flag
+Saw:
+ printf("p4ss m3 th3 fl4g: ");
+  __isoc99_scanf("%53s", s);
+  if ( strlen(s) == 53 )
+{
+...
+
+(Now we know flag is 53 characters, and it's variable is "s")
+
+Saw: (after if statement)
+sub_1614();
+
+sub_1614():
+unsigned __int64 sub_1614()
+{
+  unsigned int i; // [rsp+Ch] [rbp-34h]
+  __int64 v2[5]; // [rsp+10h] [rbp-30h] BYREF
+  unsigned __int64 v3; // [rsp+38h] [rbp-8h]
+
+  v3 = __readfsqword(0x28u);
+  qmemcpy(v2, "e\"\"f2e\"\"f32k\"g2u\"f2fz!2t~&u3", 28);
+  for ( i = 0; i <= 0x1B; ++i )
+    putchar((char)(*((_BYTE *)v2 + (int)i) ^ 0x12));
+  putchar(10);
+  return __readfsqword(0x28u) ^ v3;
+}
+
+
+>qmemcpy: takes specified values from the address "28" and assigns it to v2
+>for ( i = 0; i <= 0x1B; ++i ): seems to take each byte from v2 and adds an extra number at the end, then prints it
+>putchar(10): linefeed in ascii (new line)
+>return __readfsqword(0x28u) ^ v3: reads from address 0x28u offset to the power of the value recorded in v3
+
+(put code into https://www.programiz.com/c-programming/online-compiler/)
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int v2[5];
+    memcpy(v2, "af&`f2`!d!`a#|u2fz#'2qz&~#2j\"``!s~333", 37);
+    for ( unsigned int i = 0; i <= 24; ++i )
+    putchar(((unsigned char)*v2 + (int)i) ^ 12);
+    
+    return 0;
+}
+
+returns: "mnohijkdefg`abc|}~xyz{tu"
