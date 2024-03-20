@@ -1,0 +1,36 @@
+whataxor
+75
+
+Now you actually need to figure what the binary is doing.......maybe try a tool like https://dogbolt.org/; It shows you the output of several tools that try to extract a representation similar to what the original code might have looked like.....which is a lot nicer than reading bytes.
+
+>opened whataxor in https://dogbolt.org
+>used Relyze option
+>
+
+
+
+v1 = strcmp_2( &local_0x78, &local_0xC8 );
+>strcmp needs two strings (one in eax, other in ebx) and returns into ecx 0 if strings are equal or 1 / -1 if they are not
+
+>&local_0xC8 : 201
+
+>&local_0x78 : xor_transform( &local_0x78, 4294967210 );
+
+
+void __cdecl xor_transform( int64_t p1, int32_t p2 )
+{
+    uint32_t local_0xC; // [rsp-12]
+
+    local_0xC = 0;
+    while( *(p1 + (int32_t)local_0xC) != 0 ) {
+        *(p1 + (int32_t)local_0xC) = (uint32_t)*(p1 + (int32_t)local_0xC) & 0xFFFFFFFFFFFFFF00 | (uint8_t)*(p1 + (int32_t)local_0xC) ^ p2;
+        local_0xC = local_0xC + 1;
+    }
+}
+
+>figure out p1
+
+
+
+
+

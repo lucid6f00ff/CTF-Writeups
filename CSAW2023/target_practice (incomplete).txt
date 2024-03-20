@@ -1,0 +1,8 @@
+target_practice
+50
+
+Aim carefully... This pwnie can JUMP!
+
+>opened target_practice in dogbolt.org
+>used Relze option
+>

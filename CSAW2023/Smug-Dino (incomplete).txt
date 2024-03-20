@@ -1,0 +1,43 @@
+Smug-Dino
+412
+
+Don't you know it's wrong to smuggle dinosaurs... and other things?
+
+
+
+>went to hints tab on website
+>went to network tab in inspect element
+>saw nginx/1.17.6
+>entered nginx/1.17.6
+
+Saw:
+HINT: #1
+
+We believe the item you seek is only accessible to localhost clients on the server; 
+All other requests to /flag will be processed as a 401. 
+
+
+It seems the server is issuing 302 redirections to handle 401 erors...
+Is it possible to use the redirection somehow to get the localhost flag?
+
+
+
+HINT: #2
+
+CVE 2019-....
+
+
+Looked up: 
+CVE 2019 302 redirection
+
+Saw:
+https://github.com/advisories/GHSA-q857-rhg5-4j49
+
+Saw:
+https://nvd.nist.gov/vuln/detail/CVE-2019-3462
+
+Saw:
+Incorrect sanitation of the 302 redirect field in HTTP transport method of apt versions 1.4.8 and earlier can lead to content injection by a MITM attacker, potentially leading to remote code execution on the target machine.
+
+
+

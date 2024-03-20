@@ -1,0 +1,16 @@
+Linear Aggressor
+419
+
+nc misc.csaw.io 3000
+
+
+
+
+given:
+Wall Street Bros dropped a new model!
+Give me 30 numbers and I will give you a linear regression prediction.
+
+111111111111111111111111111111
+999999999999999999999999999999
+
+108602480332970710272830235312
