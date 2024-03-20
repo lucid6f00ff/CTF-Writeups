@@ -1,0 +1,47 @@
+Rebug 1
+50
+
+Can't seem to print out the flag :( Can you figure out how to get the flag with this binary?
+
+opened file in:
+https://dogbolt.org
+
+picked option:
+angr
+
+Saw:
+        for (v5 = 0; v5 <= 15; v5 += 1)
+        {
+            sprintf(&(&v0)[2 * v5], "%02x", (&v2)[v5]);
+        }
+        printf("csawctf{%s}\n", (unsigned int)&v0);
+
+we want: the value of v0 (&v0)
+
+>sprintf
+-creates string
+
+looked up: c sprintf
+https://www.tutorialspoint.com/c_standard_library/c_function_sprintf.htm
+
+
+>%02x
+-digits under 2 digits have a zero added. binary starting with a zero has that zero removed.
+
+looked up: c %02x
+https://stackoverflow.com/questions/18438946/format-specifier-02x
+
+
+>&(&v0)[2 * v5]
+-same as value of v0[2*v5]
+
+>(&v2)[v5])
+-same as value of v2[v5]
+
+
+
+
+incorrect:
+csawctf{01}
+
+

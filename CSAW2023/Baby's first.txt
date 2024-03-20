@@ -1,0 +1,15 @@
+Baby's First
+25
+
+Reversing means reading code. Read this file, and find the flag!
+
+
+>downloaded file
+>opened in notepad
+>saw:
+if input("What's the password? ") == "csawctf{w3_411_star7_5om3wher3}":
+  print("Correct! Congrats! It gets much harder from here.")
+
+
+flag:
+csawctf{w3_411_star7_5om3wher3}
