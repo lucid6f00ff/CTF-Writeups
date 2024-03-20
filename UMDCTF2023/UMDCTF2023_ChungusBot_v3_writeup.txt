@@ -1,0 +1,73 @@
+Umdctf2023
+
+Chungusbot v3 (umdctf2023 discord bot): all must be done via Direct Message (dm)
+Code reversal
+
+Flag0: UMDCTF{Chungu
+Wants you to send it the gif directly linked in it’s GitHub code:
+https://tenor.com/view/sigma-sigma-male-sigma-rule-b2k-sigma-expression-gif-27239871
+
+
+async def on_message(ctx):
+if ctx.author.bot:
+return
+else:
+if str(ctx.content) == "https://tenor.com/view/sigma-sigma-male-sigma-rule-b2k-sigma-expression-gif-27239871":
+if str(ctx.channel.type) == "private":
+await ctx.channel.send(f'flag0: `{flags[0]}`')
+else:
+await bot.process_commands(ctx)
+
+
+
+Flag1: 5_4ppr3c1@t3s
+—-> flip [ a b c]
+Guess game where your lowest number must equal the guess, there are 7 amount of guess as each slow can be:
+000, 001, 010, 100, 011, 110, 111
+I chose “—> flip 1 1 1”
+
+
+async def flip(ctx, one, two, three):
+flips = [random.randint(0,1) for _ in range(3)]
+guesses = [one, two, three]
+guesses = [0 if g.lower() == "tails" else 1 for g in guesses]
+# I could have made the probability worse here. count your blessings
+if flips == guesses:
+await ctx.channel.send(f'flag1: `{flags[1]}`')
+else:
+msgs = ["wrong", "incorrect", "guess better", "better luck next time"]
+await ctx.channel.send(random.choice(msgs))
+
+
+Flag2: _y0ur_l0y@lty
+—> numbers [ a b c d]
+Wants 4 integers that add up to be more than 4000, but when a+b*c+d mod 1337 equal to 25.
+
+
+1) I took as low numbers as I could, so 1000 + 1000+ 1000+ 1001 to satisfy condition 1.
+2) I used a modulus calculator after multiplying the result of a+b*c+d and incremented that number first by 1000, then 100, then 10, then 1, till the result of the mod 1337 was 25
+3) I gave the bot “—> numbers 1 0 0 10032873”
+
+async def numbers(ctx, a: int, b: int, c: int, d: int):
+if a+b+c+d > 4000 and ((a+b)*(c+d)) % 1337 == 25:
+await ctx.channel.send(f'flag2: `{flags[2]}`')
+
+
+
+Flag3: _a61527bd8ec}
+—> bee [attachment]
+Wants attachment text file of length 100+ characters which includes line “You like jazz?”
+
+
+async def bee(ctx, test=None):
+print(f'test = {test}')
+a = ctx.message.attachments
+if len(a) == 1:
+script = await a[0].read()
+# yes, I know. My requirements for a "bee movie script" are pretty low... don't judge
+if b"You like jazz?" in script and len(script) >=100:
+await ctx.channel.send(f'flag3: `{flags[3]}`')
+
+
+Flag:
+UMDCTF{Chungu5_4ppr3c1@t3s_y0ur_l0y@lty_a61527bd8ec}
